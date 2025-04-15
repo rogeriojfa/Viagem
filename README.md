@@ -1,0 +1,1 @@
+Projeto criado para atender a um teste de lógica, foi baseado em um projeto que já havia desenvolvido referente a um curso de .net core. Foi aproveitada a estrutura, e reformulado conforme a necessidade do desenvolvimento do teste
