@@ -1,0 +1,21 @@
+.resultado-box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.resultado-box h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resultado-box pre {
+  white-space: pre-wrap; /* Quebra de linha automática */
+  word-wrap: break-word;
+}

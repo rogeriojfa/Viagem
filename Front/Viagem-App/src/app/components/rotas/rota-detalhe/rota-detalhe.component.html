@@ -1,0 +1,84 @@
+<div class="row">
+  <div [ngClass]="{ 'col-md-8 pr-0': modoEditar, 'col-md-12': !modoEditar }">
+    <div class="card rounded shadow-sm">
+      <form [formGroup]="form">
+        <div class="p-3">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label>Origem</label>
+              <input
+                type="text"
+                class="form-control"
+                [ngClass]="cssValidator(f.origem)"
+                formControlName="origem"
+                placeholder="Insira a Origem"
+                [(ngModel)]="rota.origem"
+              />
+              <div *ngIf="f.origem.errors?.required" class="invalid-feedback">
+                Origem é obrigatória.
+              </div>
+              <div *ngIf="f.origem.errors?.maxlength" class="invalid-feedback">
+                Origem deve ter no máximo 3 caracteres.
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <label>Destino</label>
+              <input
+                type="text"
+                class="form-control"
+                [ngClass]="cssValidator(f.destino)"
+                formControlName="destino"
+                placeholder="insira o Destino"
+                [(ngModel)]="rota.destino"
+              />
+              <div
+                *ngIf="f.destino.errors?.required && f.destino.touched"
+                class="invalid-feedback"
+              >
+                Destino é obrigatório.
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <label>Valor</label>
+              <input
+                type="number"
+                class="form-control"
+                [ngClass]="cssValidator(f.valor)"
+                formControlName="valor"
+                placeholder="insira o Valor"
+                [(ngModel)]="rota.valor"
+              />
+              <div
+                *ngIf="f.valor.errors?.required && f.valor.touched"
+                class="invalid-feedback"
+              >
+                Valor é obrigatório.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card-footer">
+          <div class="d-flex">
+            <button
+              class="btn btn-outline-secondary mr-auto border"
+              (click)="resetForm()"
+            >
+              Cancelar Alteração
+            </button>
+            <button
+              class="btn btn-success"
+              [disabled]="!form.valid"
+              (click)="salvarRota()"
+            >
+              Salvar Rota
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<br />
