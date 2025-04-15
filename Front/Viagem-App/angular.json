@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ProRotas-App": {
+    "Viagem-App": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
